@@ -22,7 +22,7 @@ const SocialLinkBar = () => {
                         <div className="text-left">
                             <p><Link href="https://twitter.com/EngeLayer" target="_blank"
                                      className="text-left text-gray-400">X / Twitter</Link></p>
-                            <p><Link href="https://github.com/van-vanich/engelayer" target="_blank"
+                            <p><Link href="https://github.com/EngeLayer/engelayer-main.git" target="_blank"
                                      className="text-left text-gray-400">Github</Link></p>
                         </div>
                         <div>
