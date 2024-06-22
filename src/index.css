@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  @layer base {
+    :root {
+      --background: 255 0% 0%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+      --radius: 1em;
+    }
+
+  }
+
+  @layer base {
+      @font-face {
+          font-family: 'Space Grotesk';
+          font-style: normal;
+
+          src: url('/static/SpaceGrotesk-Medium.ttf') format('ttf');
+      }
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
+
+  html {
+    font-family: var(--grotesk)
+  }
+.space-grotesk-semibold {
+    font-family: 'Space Grotesk Semi Bold', serif;
+    font-style: normal;
+    src: url('/static/SpaceGrotesk-SemiBold.ttf') format('ttf');
+}
+
+.font-custom {
+    font-family: 'MyCustomFont', sans-serif;
+    src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2) format('woff2');
+}
+body {
+    background-color:hsla(0,0%,0%,1);
+}
+
+.page {
+    padding-top: 158px;
+}
+
+.page h1 {
+    font-size: 128px;
+    font-weight: 600;
+    line-height: 1;
+    padding-bottom: 208px;
+}
+
+.page__text {
+    width: 50%;
+}
+
+.page__img {
+    width: 50%;
+    align-items: start;
+}
+
+.page__img img{
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .page .container {
+        flex-direction: column-reverse;
+    }
+
+    .page {
+        padding-top: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .page .container {
+        align-items: center;
+    }
+
+    .page__img {
+        max-width: 24%;
+        padding-bottom: 40px;
+    }
+
+    .page h1 {
+        font-size: 80px;
+        padding-bottom: 50px;
+    }
+}
+
+.input-dashboard {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
