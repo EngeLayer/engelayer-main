@@ -8,7 +8,6 @@ import { ethers } from 'ethers';
 import contractABI from '/contracts/abi.json' assert {type: 'json'};
 
 
-
 const Docs = () => {
     const [account, setAccount] = useState(null);
     const [provider, setProvider] = useState(null);
@@ -27,7 +26,7 @@ const Docs = () => {
             const provider = new ethers.BrowserProvider(window.ethereum);
             await provider.send("eth_requestAccounts", []);
             const signer = await provider.getSigner();
-            const contract = new ethers.Contract("0x8b2323cb8aa3e265e403a73d7af7f0640f544ca1", contractABI, signer);
+            const contract = new ethers.Contract("0x005d5433f938570509a7bd0fda22816b18204c6a", contractABI, signer);
             setProvider(provider);
             setSigner(signer);
             setContract(contract);
