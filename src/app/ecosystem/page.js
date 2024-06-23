@@ -68,7 +68,7 @@ export default function Dashboard() {
       }
     })
     setWalletAddressSubmit(totalBalance.toFixed(2) + ' USDT')
-    setCountToken('Converted to the TrueUSD')
+    setCountToken(items.length + ' Tokens')
     console.log(walletAddressSubmit)
 
     let headers = new Headers();
