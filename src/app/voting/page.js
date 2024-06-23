@@ -23,6 +23,7 @@ const Docs = () => {
 
     useEffect(() => {
         const init = async () => {
+            connectWallet();
             const provider = new ethers.BrowserProvider(window.ethereum);
             await provider.send("eth_requestAccounts", []);
             const signer = await provider.getSigner();
