@@ -51,7 +51,7 @@ export default function Dashboard() {
         console.log(resp)
         if (resp === null || resp.data === null || resp.data.items === null) return;
         let items = resp.data.items.filter(item => item.pretty_quote !== "$0.00")
-        setCountToken('Converted to the USDT')
+        setCountToken(items.length + ' Tokens')
         setTokens(items)
         console.log(items)
         resp.data.items.forEach(item => {
